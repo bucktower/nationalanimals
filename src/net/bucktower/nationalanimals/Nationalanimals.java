@@ -13,6 +13,7 @@ public class Nationalanimals extends PApplet {
 	public void setup() {
 		size(800,600);
 		background(255,229,204);
+		noLoop();
 	}
 
 	public void draw() {
@@ -23,6 +24,7 @@ public class Nationalanimals extends PApplet {
 			//line across
 			line(0, height*grid/3, width, height*grid/3);
 		}
+		
 	}
 	
 	public static void main(String _args[]) {
