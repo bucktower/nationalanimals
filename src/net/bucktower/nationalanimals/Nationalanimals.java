@@ -11,7 +11,8 @@ import processing.core.PApplet;
 public class Nationalanimals extends PApplet {
 
 	//flags
-	ImageEditor flagAU;
+	ImageEditor joined;
+	/*ImageEditor flagAU;
 	ImageEditor flagCA;
 	ImageEditor flagFR;
 	ImageEditor flagGB;
@@ -19,7 +20,7 @@ public class Nationalanimals extends PApplet {
 	ImageEditor flagIE;
 	ImageEditor flagJP;
 	ImageEditor flagRU;
-	ImageEditor flagSE;
+	ImageEditor flagSE;*/
 	
 	//silhouettes
 	ImageEditor picAU;
@@ -32,11 +33,14 @@ public class Nationalanimals extends PApplet {
 	ImageEditor picRU;
 	ImageEditor picSE;
 	
+	ImageEditor screenShot;
+	
 	public void setup() {
 		SketchObject.setApp(this);
 		
 		//flags
-		flagAU = new ImageEditor("net/bucktower/nationalanimals/data/flags/au.png");
+		joined = new ImageEditor("net/bucktower/nationalanimals/data/flags/joined.jpg");
+		/*flagAU = new ImageEditor("net/bucktower/nationalanimals/data/flags/au.png");
 		flagCA = new ImageEditor("net/bucktower/nationalanimals/data/flags/ca.png");
 		flagFR = new ImageEditor("net/bucktower/nationalanimals/data/flags/fr.png");
 		flagGB = new ImageEditor("net/bucktower/nationalanimals/data/flags/gb.png");
@@ -44,7 +48,7 @@ public class Nationalanimals extends PApplet {
 		flagIE = new ImageEditor("net/bucktower/nationalanimals/data/flags/ie.png");
 		flagJP = new ImageEditor("net/bucktower/nationalanimals/data/flags/jp.png");
 		flagRU = new ImageEditor("net/bucktower/nationalanimals/data/flags/ru.png");
-		flagSE = new ImageEditor("net/bucktower/nationalanimals/data/flags/se.png");
+		flagSE = new ImageEditor("net/bucktower/nationalanimals/data/flags/se.png");*/
 		
 		//silhouettes
 		picAU = new ImageEditor("net/bucktower/nationalanimals/data/silhouettes/au.png");
@@ -70,7 +74,9 @@ public class Nationalanimals extends PApplet {
 			//line across
 			line(0, height*grid/3, width, height*grid/3);
 		}
-		
+		picAU.drawAt(width/6,0);			picCA.drawAt(width/6*3,0);			picFR.drawAt(width/6*5,0);
+		picGB.drawAt(width/6,height/3);		picGR.drawAt(width/6*3,height/3);	picIE.drawAt(width/6*5,height/3);
+		picJP.drawAt(width/6,height/3*2);	picRU.drawAt(width/6*3,height/3*2);	picSE.drawAt(width/6*5,height/3*2);
 	}
 	
 	public static void main(String _args[]) {
