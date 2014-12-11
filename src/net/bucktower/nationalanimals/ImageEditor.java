@@ -1,3 +1,5 @@
+//MODIFIED FOR NATINOALANIMALS
+
 // version 1.1
 // October 13, 2014
 // author: Harlan Howe
@@ -163,6 +165,18 @@ class ImageEditor extends SketchObject
      if (isEditing)
        throw new RuntimeException("Attempted to draw image while in \"Editing Mode.\"");
      image(myImage,x,y);  
+  }
+  
+  /**
+   * makes it easy to draw image in a 3x3 grid.
+   * @param x - the x-coordinate in the current Matrix where the upper-left box that will contain the image will start.
+   * @param y - the y-coordinate in the current Matrix where the upper-left box will contain the image will start.
+   */
+  public void drawImageIn3x3Grid(int x, int y, int canvasWidth, int canvasHeight){
+	  if(isEditing){
+		  throw new RuntimeException("Attempted to draw image wile in \"Editing Mode.\"");
+	  }
+	  image(myImage,x+(canvasWidth/3-width())/2,y+(canvasHeight/3-height())/2);
   }
   
   /**
